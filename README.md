@@ -138,8 +138,16 @@ SMS app examples: [Fossify Messages](https://f-droid.org/packages/org.fossify.me
 
 Known problems:
 
-- When device is connected to GSM only cellular network and goes to sleep/lockscreen, is is unable to receive calls. If you call number on Palma 2 Pro, you will get `LINE BUSY` signal. But SMS bessages are somehow received.
+- When device is connected to GSM only cellular network and goes to sleep/lockscreen, is is unable to receive calls. If you call number on Palma 2 Pro, you will get `LINE BUSY` signal. But SMS messages are somehow received.
 - There are no settings in Onyx Power Settings that will allow `Stay Connnected` to mobile network in sleep state (as it does for Wifi or Bluetooth)
+
+## Enabling VoLTE if device is not provisioned (or is blocked) by carrier
+
+I was informed that some carriers do not provision provision or even block VoLTE and VoWifi features for "unsupported" devices. That could mean, device was just not sold by specific carrier. This is pretty interesting (and strange in 2026) problematic - you can [learn something more here](https://consumerrights.wiki/w/Voice_over_LTE), if interested.
+
+There is pretty good chance that even if your carrier does not allow VoLTE and/or VoWifi, you can successfuly force it using [Pixel IMS patch](https://github.com/kyujin-cho/pixel-volte-patch) ([version 1.3.2](https://github.com/kyujin-cho/pixel-volte-patch/releases/tag/1.3.2) tested and is working).
+
+If you use Pixel IMS, it is needed to be done only once. Just enable desired function in Pixel IMS, go to settings and enable VoLTE and/or VoWifi. Then you MUST reboot Palma 2 Pro to take effect. Settings will survive reboots (not sure if survives installing BOOX update - no way to test so far)
 
 ## How to restore Palma 2 Pro if not booting to Android
 
